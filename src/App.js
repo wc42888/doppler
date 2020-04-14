@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <VelInput vel={vel} setVel={setVel} />
-      <Slider vel={vel} />
+      <Slider vel={vel} setVel={setVel} />
     </div>
   );
 };
