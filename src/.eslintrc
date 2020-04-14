@@ -1,8 +1,4 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true
-  },
   "parser": "babel-eslint",
   "extends": ["airbnb", "prettier", "prettier/react"],
   "globals": {
@@ -27,6 +23,7 @@
   "env": {
     "jest": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   }
 }
