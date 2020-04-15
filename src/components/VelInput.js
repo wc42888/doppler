@@ -20,12 +20,16 @@ const VelInput = ({ vel, setVel }) => {
   };
 
   return (
-    <>
+    <Container>
       <span>Velocity (km/s): </span>
       <Input vel={vel} onChange={onVelChange} />
-    </>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  diplay: flex;
+`;
 
 const Input = styled.input.attrs(({ vel }) => ({
   type: 'number',
