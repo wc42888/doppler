@@ -1,8 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Doppler simulator
 
-## Available Scripts
+Doppler simulator is designed for visualize the doppler effect to help the users to better understanding the concept.
 
-In the project directory, you can run:
+## Discusion
+
+The current mathod to implement color changes on the star PNG image is by changing the 'filter' property in css style. It is easy to implement but also poses issues:
+
+- the blue/red color when the slider or velocity input reaches maximum (-100/100) is not the real blue (#0000FF) or red(#FF0000). One way to achieve the real blue/red color is to use SVG to load the image and use getImageData() / setImageData() methods to adjust the colors on each pixel. However, i feel this approach is a bit more compuational extensive for what the purpose of this simulator suppose to do.
+
+- the method to convert between position of slider and the actual velocity value (getPosFromValue/getValueFromPos) is derived mathmatically by the user so it may not be understandable by looking at it.
+
+## Things to be improved
+
+- find more cleaver way to adject the color of the PNG image
+
+- CI/CD pipleline
+
+- automated end-to-end tests
+
+## Tech Stack
+
+- React [https://reactjs.org/](https://reactjs.org/)
+- Jest [jest](https://jestjs.io/)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+
+In the project directory, first run
+
+`yarn install` or `npm install`
+
+and then you can run:
 
 ### `yarn start`
 
@@ -14,55 +45,9 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Authors
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **Chao Wang**
